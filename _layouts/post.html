@@ -1,9 +1,14 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body id="page-top">
+  {% assign nav = site.data.navigation %}
+  {% include nav.html %}
 
 <!-- Post Header -->
-<header id="header" class="intro-header bg-primary text-center" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+<header id="header" class="intro-header bg-primary text-center"{% if page.header-img %} style="background-image: url('{{ site.baseurl }}{{ site.image-url }}{{ page.header-img }}{% endif %}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -116,3 +121,9 @@ layout: default
 
 
 {% endif %}
+
+  {% include contact.html %}
+  {% include scripts.html %}
+</body>
+
+</html>

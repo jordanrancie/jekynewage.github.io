@@ -4,14 +4,13 @@
 {% include head.html %}
 
 <body id="page-top">
+  {% assign nav = site.data.navigation-front %}
   {% include nav.html %}
   {% include header.html %}
-  {% include call-to-action.html %}
+  {% include post-listing.html %}
   {% include services.html %}
+  {% include multitab.html %}
   {% include portfolio.html %}
-  {% include feature.html %}
-  {% include quote.html %}
-  {% include aside.html %}
   {% include contact.html %}
   {% include scripts.html %}
 </body>

@@ -98,13 +98,13 @@ p {
     }
     &.active > a {
       color: $theme-primary !important;
-      background-color: transparent;
+      background-color: $head-primary;
       &:focus {
         color: $theme-primary !important;
-        background-color: transparent;
+        background-color: $head-primary;
       }
       &:hover, &:focus:hover {
-        background-color: transparent;
+        background-color: $head-primary;
       }
     }
   }

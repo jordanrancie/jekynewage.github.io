@@ -1,10 +1,12 @@
 # Site settings
-title: A test template here again
+title: Gday Digital Nomads
 email:
-description: A jekyll template for landing pages, portfolio and blogging
+description: An introduction to becoming a digital nomad
 
 baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
-url: "https://jekynewage.github.io" # the base hostname & protocol for your site
+url: "https://www.gdaydigitalnomads.com" # the base hostname & protocol for your site
+resource-url: "/static"
+image-url: "/static/img/"
 
 #Google Ad Words Data from scripts code (using Google responsive options) and ad client
 data-ad-slot: 2973388149
@@ -31,7 +33,8 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 paginate: 5
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+include: ["_pages"]
+exclude: ["static/less","node_modules","gulpfile.js","package.json","README.md","LICENSE","CNAME"]
 
 gems: [jekyll-paginate, jekyll-feed]
 # Build settings

@@ -4,7 +4,8 @@
 {% include head.html %}
 
 <body id="page-top">
-  {% include nav-blog.html %}
+  {% assign nav = site.data.navigation %}
+  {% include nav.html %}
 
   {{ content }}
 
