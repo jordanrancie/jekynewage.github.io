@@ -1,0 +1,28 @@
+.custom-pagination > li:first-child > a,
+.custom-pagination > li:first-child > span,
+.custom-pagination > li:last-child > a,
+.custom-pagination > li:last-child > span{
+  border-radius: 0;
+}
+
+.custom-pagination > li > a {
+  margin: 0 3px;
+  color: #424242;
+}
+
+.custom-pagination > li > a:hover {
+  color:#000 ;
+}
+
+.custom-pagination.pagination>.active>a,
+.custom-pagination.pagination>.active>a:focus,
+.custom-pagination.pagination>.active>a:hover,
+.custom-pagination.pagination>.active>span,
+.custom-pagination.pagination>.active>span:focus,
+.custom-pagination.pagination>.active>span:hover {
+  z-index: 2;
+  color: #fff;
+  cursor: default;
+  background-color: #222;
+  border-color: #222;
+}

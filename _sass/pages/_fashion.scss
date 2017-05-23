@@ -1,0 +1,62 @@
+
+.fashion-title h1 {
+  font-size: 100px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  margin-bottom: 0;
+}
+
+.fashion-footer p {
+  line-height: 20px;
+  font-size: 13px;
+}
+
+.fashion-footer .subscribe-form {
+  width: 100%;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+
+.fashion-footer .subscribe-form input {
+  background: #f8f8f8;
+  width: 65% !important;
+  border-radius: 4px;
+}
+
+.fashion-footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+.fashion-footer ul li a{
+  color: #6f7273;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 13px;
+}
+
+.fashion-footer ul li a:hover {
+  color: #222;
+}
+
+.fashion-footer .social-link a{
+  color: #cdcdcd;
+  border: 1px solid #cdcdcd;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+}
+
+.fashion-footer .social-link a:hover {
+  background: #5a5a5a;
+  color: #fff;
+  border: 1px solid transparent;
+}

@@ -1,0 +1,46 @@
+#tb-preloader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999999;
+  display: block;
+  background: #fff;
+}
+
+.tb-preloader-wave {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -30px 0 0 -30px;
+}
+
+.tb-preloader-wave:before,
+.tb-preloader-wave:after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #222;
+  animation: preloader-wave 1.6s linear infinite;
+}
+
+.tb-preloader-wave:after {
+  animation-delay: -0.8s;
+}
+
+@keyframes preloader-wave {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}

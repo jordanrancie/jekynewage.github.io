@@ -1,0 +1,35 @@
+
+.contact-comments .col-md-6, .contact-comments .col-md-12 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.form-control {
+  box-shadow: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+}
+.form-control:focus {
+  border-color: #222;
+  box-shadow: none;
+}
+
+.contact-comments .form-control {
+  border-radius: 0;
+  height: 40px;
+}
+
+.contact-comments .cmnt-text {
+  height: 95px;
+}
+
+.contact-comments label {
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #7e7e7e;
+}
+
+
+address p {
+  margin-bottom: 0px;
+}

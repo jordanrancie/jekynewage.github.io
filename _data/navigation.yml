@@ -5,16 +5,21 @@
 - title: "Latest Adventures"
   url: "#latest-adventures"
   description: "Recent posts on digital nomadic life around the world"
-  class: page-scroll
 
 - title: "Featured Apps"
   url: "/featured-apps/"
   description: "Latest Prototype Apps"
+  dropdown:
+  - title: "Featured App 1"
+    url: "/featured-apps/app1/"
+    description: "App 1 description"
+  - title: "Featured App 2"
+    url: "/featured-apps/app2/"
+    description: "App 2 description"    
 
 - title: "Digital Nomad Retreats"
   url: "#coding-retreat"
   description: "Getaways to become a digital nomad"
-  class: page-scroll
 
 - title: "Blog"
   url: "/blog/"
@@ -23,10 +28,8 @@
 - title: "Services"
   url: "#services"
   description: "List of services"
-  class: page-scroll
 
 - title: "Contact"
   url: "#contact"
   description: "How to contact us"
-  class: page-scroll
 

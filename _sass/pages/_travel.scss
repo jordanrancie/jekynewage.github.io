@@ -1,0 +1,116 @@
+.travel-booking {
+  background-image: url('../img/banner/travel.jpg');
+  position: relative;
+  height: 100vh
+}
+
+.travel-form-bg {
+  background: rgba(0,0,0,.7);
+  display: inline-block;
+  width: 100%;
+}
+
+.travel-form-bg-light {
+  background: rgba(0,0,0,.3);
+  padding: 30px 0;
+}
+
+.travel-form-bg ul {
+  margin-bottom: 0px;
+  margin-left: 15px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .travel-form-bg ul {
+    margin-bottom: -1px;
+    margin-left: 15px;
+  }
+}
+
+.travel-form {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.travel-form.icon-tabs li i {
+  display: inline-block !important;
+}
+
+.travel-form.icon-tabs li i {
+  font-size: 35px;
+  position: relative;
+  top: 7px;
+  padding-right: 10px;
+}
+
+.travel-form.icon-tabs .nav>li {
+  padding: 0px ;
+  margin-left: 0;
+}
+
+.travel-form.icon-tabs .nav>li>a  {
+  padding: 30px 40px;
+}
+
+.travel-form.icon-tabs .nav>li>a:hover {
+  /*background: #fff;*/
+}
+
+
+.travel-form.icon-tabs .nav-pills>li>a:hover,
+.travel-form.icon-tabs .nav-pills>li.active:hover>a,
+.travel-form.icon-tabs .nav-pills>li.active>a,
+.travel-form.icon-tabs .nav-pills>li.active>a:focus{
+  border-bottom: none;
+  color: #fff;
+}
+
+.travel-form .form-control,
+.travel-form .btn {
+  height: 50px;
+  border-color: transparent;
+  border-radius: 4px;
+}
+
+.travel-form .btn {
+  margin-top: 35px;
+}
+
+
+.travel-form .form-group {
+  width: 15%;
+  float: left;
+  margin-right: 10px;
+}
+
+.travel-form .form-group label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+.travel-grid .col-md-6 {
+  padding: 0;
+}
+
+
+.travel-grid .post-list-aside .post-img img {
+  border: none;
+}
+
+.travel-grid .post-list-aside {
+  float: left;
+}
+
+.travel-grid .post-desk {
+  padding: 50px 30px;
+  display: inline-block;
+  height: auto;
+}
+
+
+.featured-item.feature-outline.travel-feature {
+  position: relative;
+  padding: 0 0 0 130px;
+}

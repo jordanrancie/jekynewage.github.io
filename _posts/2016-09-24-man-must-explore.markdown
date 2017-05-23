@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     template
 title:      "Man must explore, and this is exploration at its greatest"
 subtitle:   "Problems look mighty small from 150 miles up"
 date:       2016-09-24 12:00:00

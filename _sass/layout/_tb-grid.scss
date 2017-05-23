@@ -1,0 +1,55 @@
+.tb-grid {
+  width: 100%;
+  margin: auto;
+
+  .box,
+  .box2,
+  .box3 {
+    display: inline-block;
+  }
+
+  .box {
+    width:33.3333%;
+    padding-top: 33.3333%;
+  }
+
+  .box2 {
+    width:66.6666%;
+    padding-top: 33.3333%;
+  }
+
+  .box3 {
+    width:66.6666%;
+    padding-top: 66.6666%;
+  }
+
+  .box-nano {
+    position: relative;
+    width: 50%;
+    margin: 0;
+    padding-top: 50%;
+    float: left;
+  }
+
+  .item > .item-inner,
+  .box-nano > .item-inner {
+    position: absolute;
+    margin: 0;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    cursor: crosshair;
+
+  }
+
+  .items > .item-inner {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}

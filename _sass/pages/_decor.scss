@@ -1,0 +1,44 @@
+
+//.slide-top-adjust {
+//  top: -100px;
+//  position: relative;
+//}
+//
+//.sticky + .slide-top-adjust {
+//  top: -60px;
+//}
+
+
+.decor-category a {
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+
+}
+
+.decor-category a img {
+  transition: all .3s ease-in-out;
+}
+
+.decor-category a:hover img {
+  transform: scale(1.3);
+}
+
+.decor-category a .title {
+  position: absolute;
+  top: 35%;
+  right: 10%;
+  text-align: right;
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.decor-category a .title.dark {
+  color: #222;
+}
+
+.decor-category a .title.light {
+  color: #fff;
+}

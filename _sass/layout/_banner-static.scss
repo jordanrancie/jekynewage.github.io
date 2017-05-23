@@ -1,0 +1,124 @@
+.vertical-align .container-mid{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 200;
+}
+
+.light-box,
+.dark-box {
+  padding: 70px 50px;
+}
+
+.light-box {
+  background: rgba(255,255,255,.5);
+  outline: 5px solid rgba(255,255,255,.5);
+  outline-offset: 5px;
+}
+
+.dark-box {
+  background: rgba(0,0,0,.5);
+  outline: 5px solid rgba(0,0,0,.5);
+  outline-offset: 5px;
+}
+
+.banner-box {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.banner-box h1,
+.banner-box h3,
+.banner-title h1,
+.banner-title h3,
+.banner-box h2,
+.banner-box h2,
+.banner-title h2,
+.banner-title h2 {
+  margin-bottom: 0;
+}
+
+.banner-box h1,
+.banner-title h1 {
+  letter-spacing: 5px;
+  font-size:60px;
+  font-weight: 300;
+  line-height: normal;
+}
+
+.banner-box h3,
+.banner-title h3 {
+  letter-spacing: 6px;
+  font-size:20px;
+}
+
+.banner-title.light-txt h1,
+.banner-title.light-txt h2,
+.banner-title.light-txt h3 {
+  color: #fff;
+}
+
+//header.transparent-header + .vertical-align .banner-title,
+//header .semi-transparent + .vertical-align .banner-title {
+//  margin-top: 0;
+//}
+//
+//header + .vertical-align .banner-title {
+//  margin-top: 100px;
+//}
+
+
+.b-lg-txt {
+  font-size: 100px !important;
+  font-weight: 300;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 6000;
+}
+
+.hero-text h1 {
+  margin-bottom: 10px;
+}
+
+.hero-text a {
+  margin: 10px 5px;
+}
+
+.banner-scroll a {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -11px;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #fff;
+  z-index: 10;
+}
+
+.banner-scroll a:before {
+  display: block;
+  content: "";
+  width: 25px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+.banner-scroll .scroll-down {
+  position: absolute;
+  display: block;
+  width: 2px;
+  height: 8px;
+  background: #fff;
+  margin-left: -3px;
+  left: 50%;
+  top: 8px;
+  z-index: 2;
+  animation: 3s arrow infinite ease;
+}

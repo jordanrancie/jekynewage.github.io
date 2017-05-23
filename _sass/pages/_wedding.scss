@@ -1,0 +1,71 @@
+.wedding-font {
+  font-family: 'Arizonia', cursive;
+  text-transform: none;
+}
+
+.bride-groom-txt {
+  font-size: 100px !important;
+  line-height: normal;
+}
+
+.wd-font-50 {
+  font-size: 50px !important;
+}
+
+.wd-font-72 {
+  font-size: 72px !important;
+}
+
+.wd-font-light {
+  font-weight: 300 !important;
+}
+
+.bride-groom-row {
+  padding: 0 50px;
+}
+
+.bride-groom-row .team-img {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+.bride-groom-row .team-img img {
+  width: 100%;
+  height: auto;
+}
+
+.wed-thumb, .bride-groom-row .team-img.fnf-img {
+  width: 160px;
+  height: 160px;
+  display: inline-block;
+}
+
+.wed-thumb img, .bride-groom-row .team-img.fnf-img img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 10px solid #fff;
+}
+
+.m-top-negative {
+  position: relative;
+  top: -80px;
+}
+
+.pad-less {
+  padding: 0;
+}
+
+.wedding-form .form-control {
+  border-radius: 5px;
+}
+
+.wd-photo-border {
+  border: 10px solid #f2f3f3 !important;
+}
+
+.heart-space {
+  font-size: 30px;
+  padding: 0 10px;
+}
+

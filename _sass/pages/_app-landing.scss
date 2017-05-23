@@ -1,0 +1,25 @@
+.app-device {
+  /*position: relative;*/
+}
+
+.app-device img {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+}
+
+.app-img-bottom {
+  min-height: 600px;
+}
+
+.app-img-bottom img {
+  position: absolute;
+  left:15%;
+  bottom: 0;
+}
+
+.app-icon i {
+  margin-right: 15px;
+  font-size: 30px;
+  color: #dedede;
+}

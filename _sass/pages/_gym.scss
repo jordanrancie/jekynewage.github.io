@@ -1,0 +1,17 @@
+.gym-schedule {
+  display: block;
+
+  li{
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    padding-bottom: 10px;
+    font-size: 16px;
+    i{
+      padding-right: 10px;
+    }
+    .opening-hour {
+      text-align: right;
+      float: right;
+    }
+  }
+}

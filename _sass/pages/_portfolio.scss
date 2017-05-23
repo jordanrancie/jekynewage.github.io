@@ -1,0 +1,27 @@
+.portfolio-meta {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-meta li {
+  margin: 15px 0;
+  color: #666;
+}
+
+.portfolio-meta li span {
+  display: inline-block;
+  width: 130px;
+  letter-spacing: 2px;
+  color: #000;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.portfolio-meta li a {
+  margin-right: 10px;
+  color: #cdcdcd;
+}
+
+.portfolio-meta li a:hover {
+  color: #323232;
+}

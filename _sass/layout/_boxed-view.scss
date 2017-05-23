@@ -1,0 +1,32 @@
+.boxed.box-bg {
+  background: #ddd;
+}
+
+.boxed .wrapper {
+  width: 1170px;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+}
+
+.boxed header.sticky,
+.boxed header.sticky .header-sticky,
+.boxed header.transparent-header {
+  width: 1170px;
+}
+
+.box-background-img {
+  background-image: url("../img/parallax/para7.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: 50% 50%;
+}
+
+.box-pattern {
+  background-image: url("../img/pattern-2.png");
+  background-attachment: fixed;
+  background-repeat: repeat;
+  background-position: 50% 50%;
+}

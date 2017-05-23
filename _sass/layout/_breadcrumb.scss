@@ -1,0 +1,15 @@
+.breadcrumb li {
+  text-transform: uppercase;
+}
+
+.breadcrumb li > a  {
+  color: #7e7e7e;
+}
+
+.breadcrumb li > a:hover {
+  color: #222;
+}
+
+.breadcrumb>.active {
+  color: #222;
+}

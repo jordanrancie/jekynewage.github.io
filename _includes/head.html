@@ -1,40 +1,36 @@
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <!--favicon icon-->
+    <link rel="icon" type="image/png" href="/favicon.ico">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ site.resource-url }}/vendor/bootstrap/css/bootstrap.min.css" type="text/css">
+     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-    <!-- Custom Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <!--common style-->
+    <link href='http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200' rel='stylesheet' type='text/css'>
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="{{ site.resource-url }}/css/animate.min.css" type="text/css">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="{{ site.resource-url }}/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ site.resource-url }}/vendor/animate/animate.css">
+    <link rel="stylesheet" href="{{ site.resource-url }}/vendor/elasic-slider/elastic.css">
+    <link rel="stylesheet" href="{{ site.resource-url }}/vendor/iconmoon/linea-icon.css">
+    <link rel="stylesheet" href="{{ site.resource-url }}/vendor/magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="{{ site.resource-url }}/vendor/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="{{ site.resource-url }}/vendor/owl-carousel/owl.theme.css">
     <link rel="stylesheet" href="{{ site.resource-url }}/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ site.resource-url }}/vendor/simple-line-icons/css/simple-line-icons.css">
-    <link rel="stylesheet" href="{{ site.resource-url }}/vendor/device-mockups/device-mockups.min.css">
+    <link rel="stylesheet" href="{{ site.resource-url }}/css/shortcodes.css">
+    <link rel="stylesheet" href="{{ site.resource-url }}/css/style.css">
+    <link rel="stylesheet" href="{{ site.resource-url }}/css/default-theme.css">
+    <!-- endinject -->
 
-    <!-- Custom CSS
-    <link rel="stylesheet" href="css/main.css" type="text/css"> -->
-    <link href="{{ site.resource-url }}/css/main.css" rel="stylesheet">
-    <link href="{{ site.resource-url }}/css/components.css" rel="stylesheet">
-    <link href="{{ site.resource-url }}/css/shortcodes.css" rel="stylesheet">
-    <link href="{{ site.resource-url }}/css/style.css" rel="stylesheet">
-    <link href="{{ site.resource-url }}/css/default-theme.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="assets/vendor/backward/html5shiv.js"></script>
+    <script src="assets/vendor/backward/respond.min.js"></script>
     <![endif]-->
     
     <!-- Google ADS mobile block -->
@@ -52,5 +48,4 @@
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
       <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ site.addthis_id }}"></script>
       {% endif %}
-
 </head>

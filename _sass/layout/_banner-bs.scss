@@ -1,0 +1,46 @@
+.bs-hero.full-screen .carousel-inner .item img{
+  /*height: 100vh;*/
+  height: auto;
+  width: 100%;
+}
+
+.bs-hero.full-screen .carousel-inner .item .bs-info {
+  position: absolute;
+  top: 40%;
+  left: 12%;
+}
+
+.bs-hero.full-screen .carousel-inner .item .bs-info-center {
+  position: absolute;
+  width: 1000px;
+  top: 30%;
+  left: 50%;
+  margin-left: -500px;
+  text-align: center;
+}
+
+.bs-hero.full-screen .carousel-inner .item .bs-info-right {
+  position: absolute;
+  /*width: 1170px;*/
+  top: 35%;
+  right: 12%;
+  text-align: right;
+}
+
+.bs-hero.full-screen .carousel-inner .item .bs-info h1 {
+  text-transform: uppercase ;
+}
+
+.bs-hero.full-screen .carousel-indicators {
+  z-index: 1200;
+}
+
+.bs-hero.full-screen .carousel-inner .item .bs-info h1 span {
+  font-size: 18px;
+}
+
+.bs-hero.full-screen .carousel.slide .carousel-control {
+  width: 30%;
+  margin-top: 180px;
+  margin-bottom: 120px;
+}

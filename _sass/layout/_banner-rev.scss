@@ -1,0 +1,53 @@
+.slider-revulation-wrapper {
+
+}
+
+.tp-banner-container{
+  width:100%;
+  position:relative;
+  padding:0;
+
+}
+
+.tp-banner{
+  width:100%;
+  position:relative;
+}
+
+.tp-banner > ul {
+  padding: 0;
+  list-style: none;
+}
+
+.tp-banner-fullscreen-container {
+  width:100%;
+  position:relative;
+  padding:0;
+}
+
+.rev-heading {
+  color: #333;
+  /*font: normal 60px/1.5 'Abel', sans-serif;*/
+  font: normal 60px/1.5 'Source Sans Pro', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 300;
+}
+
+.rev-subheading {
+  /*font-family: 'Abel', sans-serif;*/
+  text-transform: uppercase;
+  color: #555;
+  font-size: 20px;
+  letter-spacing: 6px;
+}
+
+.rev-desc {
+  font-size: 16px;
+  color: #454545;
+  line-height: 26px;
+}
+
+.rev-white {
+  color: #fff;
+}

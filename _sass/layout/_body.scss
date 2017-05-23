@@ -1,0 +1,78 @@
+.body-content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.parallax {
+  background-image: url("../img/demo.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: 50% 50%;
+}
+
+.parallax-inner {
+  background-image: url("../img/demo.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  padding: 150px 0;
+  background-position: 50% 50%;
+}
+
+.banner-state {
+  background-image: url("../img/banner/menu_banner.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: 50% 50%;
+}
+
+.full-banner {
+  background-image: url('../img/banner/creative-banner.jpg');
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  background-position: 50% 50%;
+}
+
+.page-content {
+  padding: 100px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.page-content-sm {
+  padding: 50px 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.full-content {
+  display: inline-block;
+  width: 100%;
+  padding: 0px 0 !important;
+}
+
+.overlay-dark {
+  background: rgba(0,0,0,.5);
+  display: inherit;
+}
+
+.overlay-light {
+  background: rgba(255,255,255,.5);
+  display: inherit;
+}
+
+.massive-list {
+  padding-left:15px;
+}
+
+.massive-list li{
+  margin-bottom: 10px;
+}

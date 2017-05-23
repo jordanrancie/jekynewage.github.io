@@ -1,0 +1,173 @@
+.cd-img-replace {
+    /* replace text with a background-image */
+    display: inline-block;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+/* No Touch devices */
+.cd-nav-trigger {
+    //display: none;
+}
+
+.no-touch #cd-vertical-nav {
+    position: fixed;
+    right: 40px;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    z-index: 300;
+}
+.no-touch #cd-vertical-nav li {
+    text-align: right;
+    list-style: none;
+}
+.no-touch #cd-vertical-nav a {
+    display: inline-block;
+    /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.no-touch #cd-vertical-nav a:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.no-touch #cd-vertical-nav a span {
+    float: right;
+    display: inline-block;
+    transform: scale(0.6);
+}
+.no-touch #cd-vertical-nav a:hover span,
+.no-touch #cd-vertical-nav li.active span{
+    transform: scale(1);
+}
+.no-touch #cd-vertical-nav a:hover .cd-label {
+    opacity: 1;
+}
+.no-touch #cd-vertical-nav a.is-selected .cd-dot {
+    background-color: white;
+}
+.no-touch #cd-vertical-nav .cd-dot {
+    position: relative;
+    /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
+    top: 11px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #ababab;
+    transition: transform 0.2s, background-color 0.5s;
+    transform-origin: 50% 50%;
+}
+.no-touch #cd-vertical-nav .cd-label {
+    position: relative;
+    margin-right: 10px;
+    padding: .4em .5em;
+    color: #7e7e7e;
+    font-size: 14px;
+    transition: transform 0.2s, opacity 0.2s;
+    opacity: 0;
+    transform-origin: 100% 50%;
+}
+
+/* Touch devices */
+.touch .cd-nav-trigger {
+    // display: block;
+    // z-index: 9999;
+    // position: fixed;
+    // bottom: 30px;
+    // right: 5%;
+    // height: 44px;
+    // width: 44px;
+    // border-radius: 0.25em;
+    // background: rgba(255, 255, 255, 0.9);
+}
+.touch .cd-nav-trigger span {
+    // position: absolute;
+    // height: 4px;
+    // width: 4px;
+    // background-color: #3e3947;
+    // border-radius: 50%;
+    // left: 50%;
+    // top: 50%;
+    // bottom: auto;
+    // right: auto;
+    // transform: translateX(-50%) translateY(-50%);
+}
+.touch .cd-nav-trigger span::before, .touch .cd-nav-trigger span::after {
+    // content: '';
+    // height: 100%;
+    // width: 100%;
+    // position: absolute;
+    // left: 0;
+    // background-color: inherit;
+    // border-radius: inherit;
+}
+.touch .cd-nav-trigger span::before {
+    // top: -4px;
+}
+.touch .cd-nav-trigger span::after {
+    // top: 4px;
+}
+
+.touch #cd-vertical-nav {
+    position: fixed;
+    z-index: 1;
+    right: 5%;
+    bottom: 30px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 90%;
+    overflow-y: scroll;
+    transform-origin: right bottom;
+    transform: scale(0);
+    transition-property: transform;
+    transition-duration: 0.2s;
+    border-radius: 0.25em;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.touch #cd-vertical-nav a {
+    display: block;
+    padding: 1em;
+    border-bottom: 1px solid rgba(62, 57, 71, 0.1);
+}
+.touch #cd-vertical-nav a span:first-child {
+    display: none;
+}
+.touch #cd-vertical-nav a.is-selected span:last-child {
+    color: #7e7e7e;
+}
+.touch #cd-vertical-nav.open {
+    transform: scale(1);
+}
+.touch #cd-vertical-nav.open + .cd-nav-trigger {
+    background-color: transparent;
+}
+.touch #cd-vertical-nav.open + .cd-nav-trigger span {
+    background-color: rgba(62, 57, 71, 0);
+}
+.touch #cd-vertical-nav.open + .cd-nav-trigger span::before, .touch #cd-vertical-nav.open + .cd-nav-trigger span::after {
+    background-color: #3e3947;
+    height: 3px;
+    width: 20px;
+    border-radius: 0;
+    left: -8px;
+}
+.touch #cd-vertical-nav.open + .cd-nav-trigger span::before {
+    transform: rotate(45deg);
+    top: 1px;
+}
+.touch #cd-vertical-nav.open + .cd-nav-trigger span::after {
+    transform: rotate(135deg);
+    bottom: 0;
+}
+.touch #cd-vertical-nav li:last-child a {
+    border-bottom: none;
+}
+
+@media only screen and (min-width: 768px) {
+    .touch .cd-nav-trigger, .touch #cd-vertical-nav {
+        bottom: 40px;
+    }
+}

@@ -1,0 +1,66 @@
+.banner-intro {
+  background-image: url("../img/intro/intro-banner.jpg")!important;
+}
+
+.intro-title h2 {
+  font-size: 36px;
+}
+
+.intro-title p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff !important;
+  letter-spacing: 2px;
+}
+
+.intro-title p span {
+  font-size: 26px;
+}
+
+.intro-title i {
+  font-size: 26px;
+  color: rgba(255,255,255,.5);
+  line-height: 20px;
+  top: 4px;
+  position: relative;
+  right: 10px;
+}
+
+.intro-title .btn {
+  line-height: 32px;
+}
+
+.intro-title a:hover i,
+.intro-title a:focus i {
+  color: #222;
+}
+
+.intro-portfolio img {
+  margin-bottom: 30px;
+}
+
+.intro-portfolio .fit-img {
+  margin-bottom: 20px;
+}
+
+.intro-portfolio a img,
+.intro-portfolio a img:hover {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.intro-portfolio a img:hover {
+  opacity: .8;
+
+}
+
+.intro-portfolio a {
+  text-transform: uppercase;
+  color: #222;
+}
+
+.dark-bg-alt .intro-portfolio  a {
+  text-transform: uppercase;
+  color: #fff;
+}

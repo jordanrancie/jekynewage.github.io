@@ -1,0 +1,23 @@
+.lift-off {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background: rgba(0,0,0,.6);
+  color: #fff;
+  text-align: center;
+  transition: all .3s;
+}
+
+.lift-off_show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lift-off_hide {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(40px);
+}

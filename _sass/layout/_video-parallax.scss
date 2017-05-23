@@ -1,0 +1,41 @@
+.video-parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-parallax .container{
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  left: 0;
+  right: 0;
+  color: #fff;
+  margin-top: -80px;
+}
+
+.video-parallax .container i{
+  font-size: 50px;
+  margin-bottom: 30px;
+  display: block;
+}
+
+.video-parallax .container+.video-wrap {
+  z-index: 1;
+}
+
+.video-wrap {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.video-overlay, .banner-overaly {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: rgba(0,0,0,0.5);
+  -webkit-backface-visibility: hidden;
+}

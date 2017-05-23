@@ -1,0 +1,18 @@
+.container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+// override bootstrap column padding to match massive design
+@for $i from 1 through 12 {
+  .col-lg-#{$i},
+  .col-md-#{$i},
+  .col-sm-#{$i},
+  .col-xs-#{$i} {
+    @extend .container-fluid;
+  }
+}
+
+.btn-default {
+  border-color: #e5e5e5;
+}

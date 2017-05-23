@@ -6,7 +6,8 @@ description: An introduction to becoming a digital nomad
 baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
 url: "https://www.gdaydigitalnomads.com" # the base hostname & protocol for your site
 resource-url: "/static"
-image-url: "/static/img/"
+post-image-url: "/images"
+static-image-url: "/static/img"
 
 #Google Ad Words Data from scripts code (using Google responsive options) and ad client
 data-ad-slot: 2973388149
@@ -33,8 +34,10 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 paginate: 5
-include: ["_pages"]
-exclude: ["static/less","node_modules","gulpfile.js","package.json","README.md","LICENSE","CNAME"]
+include: ["_pages", "_snippets"]
+exclude: [node_modules","gulpfile.js","package.json","README.md","LICENSE","CNAME"]
 
 gems: [jekyll-paginate, jekyll-feed]
 # Build settings
+
+port: 4000

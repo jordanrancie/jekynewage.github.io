@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+    <!--  preloader start -->
+    <div id="tb-preloader">
+        <div class="tb-preloader-wave"></div>
+    </div>
+    <!-- preloader end -->
+
+    <div class="wrapper">
+    {% assign nav = site.data.navigation-front %}
+
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+  </div>
+  <!-- end wrapper -->
+
+  {% include scripts.html %}
+
+</body>
+</html>

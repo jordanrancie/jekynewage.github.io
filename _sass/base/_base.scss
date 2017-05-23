@@ -1,0 +1,95 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.5;
+  color: #323232;
+  font-size: 15px;
+  font-weight: 400;
+  text-rendering:optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+}
+
+a:active,
+a:focus { outline: none !important; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+  line-height: 1.5;
+  margin: 0 0 30px 0;
+  font-weight: normal;
+}
+
+h1,
+h2 {
+  letter-spacing: 2px;
+}
+
+h3,
+h4 {
+  letter-spacing: 2px;
+}
+
+h5,
+h6 {
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+a:hover,
+a:focus {
+  color: #323232;
+}
+
+a,
+.btn {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+a img,
+iframe {
+  border: none;
+}
+
+p {
+  margin: 0 0 30px;
+  line-height: 30px;
+  color: #7e7e7e;
+}
+
+hr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 30px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f9f9f9;
+  border: 1px solid #EDEDED;
+  border-radius: 0;
+}
+
+
+.parallax-window {
+  min-height: 400px;
+  background: transparent;
+  padding: 150px 0;
+}
