@@ -2,7 +2,8 @@
   url: "/#"
   description: "Main Home Page"
 
-- title: "Latest Adventures"
+
+- title: "Latest Adventures / Blog"
   url: "#latest-adventures"
   description: "Recent posts on digital nomadic life around the world"
 
@@ -20,16 +21,40 @@
 - title: "Digital Nomad Retreats"
   url: "#coding-retreat"
   description: "Getaways to become a digital nomad"
-
-- title: "Blog"
-  url: "/blog/"
-  description: "All articles at gday digital nomads"
+  dropdown:
+  - title: "Bali"
+    url: "/coding-retreat/bali/"
+    description: "Indonesia Coding Retreat"
+  - title: "Mexico"
+    url: "/coding-retreat/mexico/"
+    description: "Mexico Coding Retreat"
 
 - title: "Services"
   url: "#services"
   description: "List of services"
+  dropdown:
+  - title: "Online Yoga"
+    url: "/yoga/"
+    description: "Yoga"  
+  - title: "Travel Packages"
+    url: "/travel/"
+    description: "Travel Packages"  
+  - title: "IT Services"
+    url: "/it-services/"
+    description: "IT Services"    
 
-- title: "Contact"
-  url: "#contact"
-  description: "How to contact us"
+- title: "Shop"
+  url: "/shop/"
+  description: "Another online shop"
+  dropdown:
+  - title: "Category One"
+    url: "/shop/category-one/"
+    description: "Category 1 description"
+  - title: "Category Two"
+    url: "/shop/category-tow/"
+    description: "Category 2 description"    
+
+- title: "About Us"
+  url: "#about-us"
+  description: "About Us"
 
