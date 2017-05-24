@@ -166,7 +166,7 @@
          Full screen banner init
          ===============================================*/
         $window.bind("resizeEnd", function () {
-            $("#fullscreen-banner").height($window.height());
+            $("#fullscreen-banner").height($window.height() / 1.5);
         });
 
         $window.resize(function () {
@@ -176,6 +176,7 @@
             }, 300);
         }).trigger("resize");
 
+        
 
         /*==============================================
          Portfolio filterable grid init
