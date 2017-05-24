@@ -30,6 +30,7 @@
   },
   "scripts": {
     "setup": "gulp setup",
+    "clean": "gulp clean",
     "watch": "gulp"
   }
 }

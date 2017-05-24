@@ -9,7 +9,8 @@ var pkg = require('./package.json');
 
  
 gulp.task('clean', function () {
-    return gulp.src('./_site/static/**', {read: false})
+    return gulp.src('./_site/static/*', {read: false})
+        .pipe(plumberNotifier())
         .pipe(clean());
 });
 
@@ -54,7 +55,12 @@ gulp.task("html-prettify", function() {
 });
 
 gulp.task("minify-css", ['sass'], function() {
-    return gulp.src('./_site/static/css/*.css')
+    return gulp.src([
+        './_site/static/css/style.css',
+        './_site/static/css/shortcodes.css',
+        './_site/static/css/default-theme.css',
+        './_site/static/css/red-theme.css',
+        './_site/static/css/green-theme.css'])
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest("./_site/static/css"));
@@ -69,5 +75,5 @@ gulp.task('watch:js', function () {
 });
 
 
-gulp.task('default', ['clean', 'copy-images', 'copy-static', 'minify-js', 'minify-css', 'watch:sass', 'watch:js']);
-gulp.task('setup', ['clean', 'copy-images', 'copy-static', 'minify-js', 'minify-css']);
+gulp.task('default', ['copy-images', 'copy-static', 'minify-js', 'minify-css', 'watch:sass', 'watch:js']);
+gulp.task('setup', ['copy-images', 'copy-static', 'minify-js', 'minify-css']);
