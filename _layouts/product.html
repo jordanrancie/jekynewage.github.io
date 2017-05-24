@@ -12,13 +12,12 @@
     <!-- preloader end -->
 
     <div class="wrapper">
-    {% if nav %}{% else %}
-      {% assign nav = site.data.navigation %}
-    {% endif %}
-
-  	{% include header-trans.html %}
-
-  	{{ content }}
+    {% assign nav = site.data.navigation %}
+  	
+  	{% include header-black.html %}
+    {% include breadcrumb.html %}
+  	
+    {% include product-item.html %}
 
   	{% include footer.html %}
 

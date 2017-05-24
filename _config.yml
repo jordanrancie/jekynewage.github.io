@@ -8,6 +8,7 @@ url: "https://www.gdaydigitalnomads.com" # the base hostname & protocol for your
 resource-url: "/static"
 post-image-url: "/images"
 static-image-url: "/static/img"
+product-image-url: "/images/shop"
 
 #Google Ad Words Data from scripts code (using Google responsive options) and ad client
 data-ad-slot: 2973388149
@@ -33,11 +34,23 @@ social:
 markdown: kramdown
 highlighter: rouge
 permalink: pretty
-paginate: 5
-include: ["_pages", "_snippets"]
-exclude: [node_modules","gulpfile.js","package.json","README.md","LICENSE","CNAME"]
+include: ["_pages"]
+exclude: ["node_modules","gulpfile.js","package.json","README.md","LICENSE","CNAME"]
+keep_files: ["static","images"]
+permalink: pretty
+collections:
+  shop:
+    output: true
+    permalink: /shop/:categories/:title.html
 
-gems: [jekyll-paginate, jekyll-feed]
+defaults:
+  - scope:
+      path: ""
+      type: shop
+    values:
+      layout: product    
+
+gems: [jekyll-feed]
 # Build settings
 
 port: 4000

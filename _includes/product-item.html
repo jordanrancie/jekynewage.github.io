@@ -1,0 +1,288 @@
+
+        <!--body content start-->
+        <section class="body-content ">
+
+            <div class="page-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="post-list-aside">
+                                <div class="post-single">
+                                    {% if page.images.size == 1 %}
+                                    <!-- Image single example -->
+                                    <img src="{{ site.product-image-url }}/8.jpg" alt="{{ image.title }}" />
+                                    {% else if page.images.size > 1 %}
+                                    <!-- Gallery example -->
+                                    <div class="post-slider-thumb post-img text-center" attrib="itworked">
+                                        <ul class="slides">
+                                            {% for image in page.images %}
+                                            <li data-thumb="{{ site.product-image-url }}/{% if image.thumbnail-url %}{{ image.thumbnail-url}}{% else %}{{ image.image-url}}{% endif %}">
+                                                <a href="javascript:;" title="{{ image.title }}">
+                                                    <img src="{{ site.product-image-url }}/{{ image.image-url}}" alt="{{ image.description }}" />
+                                                </a>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="product-title">
+                                <h2 class="text-uppercase">{{ page.name }}</h2>
+                            </div>
+
+                            <div class="product-price txt-xl">
+                                <span class="border-tb p-tb-10"> ${{ page.price }} {% if page.discounted %}<del>${{ page.discounted }}</del>{% endif %}</span>
+                            </div>
+                            {% if page.additional-details %}
+                            <ul class="portfolio-meta m-bot-10 m-top-10">
+                                {% for detail in page.additional-details %}
+                                <li><span> {{ detail.name }} </span> {{ detail.value }}</li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                            <p>{{ page.summary }}</p>
+
+                            <!--
+                            <ul class="portfolio-meta m-bot-10 stock">
+                                <li><span><strong class="number-item"> 390</strong> Item </span>  <span class="status">In Stock</span></li>
+                            </ul>
+                            -->
+                            <div class="p-values">
+                                <ul class="portfolio-meta m-bot-10 ">
+                                    <li>
+                                        <span> Size </span>
+                                        <span>
+                                            <select class="form-control">
+                                                <option>S</option>
+                                                <option>M</option>
+                                                <option>L</option>
+                                                <option>XL</option>
+                                            </select>
+                                        </span>
+                                    </li>
+                                </ul>
+                                <ul class="p-quantity m-bot-10 ">
+                                    <li>
+                                        <label>Quantity</label>
+                                    </li>
+                                    <li>
+                                        <input id="demo0" type="text" value="1" name="demo0" data-bts-min="1" data-bts-max="100" data-bts-init-val="" data-bts-step="1" data-bts-decimal="0" data-bts-step-interval="100" data-bts-force-step-divisibility="round" data-bts-step-interval-delay="500"
+                                        data-bts-prefix="" data-bts-postfix="" data-bts-prefix-extra-class="" data-bts-postfix-extra-class="" data-bts-booster="true" data-bts-boostat="10" data-bts-max-boosted-step="false" data-bts-mousewheel="true" data-bts-button-down-class="btn btn-default"
+                                        data-bts-button-up-class="btn btn-default" />
+                                    </li>
+
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="clearfix">
+                                <a href="{{ page.external-url }}" class="btn btn-medium btn-dark-solid  "><i class="fa fa-shopping-cart"></i> Buy Now </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row page-content">
+                        <div class="col-md-12">
+                            <!--tabs border start-->
+                            <section class="normal-tabs">
+                                <ul class="nav nav-tabs">
+                                    <li class="active">
+                                        <a data-toggle="tab" href="#tab-one">More Info</a>
+                                    </li>
+                                    {% if page.specifications %}
+                                    <li class="">
+                                        <a data-toggle="tab" href="#tab-two">Specification</a>
+                                    </li>
+                                    {% endif %}
+                                    <li class="">
+                                        <a data-toggle="tab" href="#tab-three">Reviews ({{ page.reviews.size }})</a>
+                                    </li>
+                                </ul>
+                                <div class="panel-body">
+                                    <div class="tab-content">
+                                        <div id="tab-one" class="tab-pane active">
+                                            <h4 class="text-uppercase">Product Description</h4>
+                                            {{ page.more }}
+                                        </div>
+                                        {% if page.specifications %}
+                                        <div id="tab-two" class="tab-pane">
+                                            <table class="table table-striped table-bordered">
+                                                <tbody>
+                                                    {% for spec in page.specifications %}
+                                                    <tr>
+                                                        <td>{{ spec.name }}</td>
+                                                        <td>{{ spec.value }}</td>
+                                                    </tr>
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        {% endif %}
+
+                                        <div id="tab-three" class="tab-pane">
+                                            <ul class="media-list comments-list clearlist">
+                                                {% for review in page.reviews %}
+                                                <!-- comment item start-->
+                                                <li class="media">
+                                                    <a class="pull-left" href="#">
+                                                        <img class="media-object review-avatar" src="{{ site.static-image-url }}/post/a1.png" alt="">
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <div class="comment-info">
+                                                            <div class="reviewer text-uppercase">
+                                                                <a href="#">{{ review.name }}</a>
+                                                            </div>
+                                                            {{ review.date }}
+                                                            <span class="review-rating">
+                                                                {% case review.rating %}
+                                                                    {% when 1 %}
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star-o"></i>
+                                                                <i class="fa fa-star-o"></i>
+                                                                <i class="fa fa-star-o"></i>
+                                                                <i class="fa fa-star-o"></i>
+                                                                    {% when 2 %}
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>  
+                                                                <i class="fa fa-star-o"></i>
+                                                                <i class="fa fa-star-o"></i>
+                                                                <i class="fa fa-star-o"></i>  
+                                                                    {% when 3 %}
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>  
+                                                                <i class="fa fa-star-o"></i>
+                                                                <i class="fa fa-star-o"></i> 
+                                                                    {% when 4 %}
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star-o"></i>    
+                                                                    {% when 5 %}
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>    
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                <i class="fa fa-star"></i>
+                                                                {% endcase %}
+                                                            </span>
+                                                        </div>
+                                                        <p>{{ review.review }}</p>
+                                                    </div>
+                                                </li>
+                                                {% endfor %}
+
+                                            </ul>
+
+                                            <!--add review start-->
+                                            <div class="heading-title-alt text-left heading-border-bottom">
+                                                <h4 class="text-uppercase">ADD REVIEW</h4>
+                                            </div>
+
+                                            <!-- TODO - simple email first -->
+                                            <form method="post" action="/#" id="form" role="form" class="blog-comments">
+
+                                                <div class="row">
+
+                                                    <div class="col-md-6 form-group">
+                                                        <!-- Name -->
+                                                        <input type="text" name="name" id="name" class=" form-control" placeholder="Name *" maxlength="100" required="">
+                                                    </div>
+
+                                                    <div class="col-md-6 form-group">
+                                                        <!-- Email -->
+                                                        <input type="email" name="email" id="email" class=" form-control" placeholder="Email *" maxlength="100" required="">
+                                                    </div>
+
+
+                                                    <div class="form-group col-md-12">
+                                                        <select class="form-control">
+                                                            <option value="">Rating -- Select One --</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <!-- Comment -->
+                                                    <div class="form-group col-md-12">
+                                                        <textarea name="text" id="text" class=" form-control" rows="6" placeholder="Comment" maxlength="400"></textarea>
+                                                    </div>
+
+                                                    <!-- Send Button -->
+                                                    <div class="form-group col-md-12">
+                                                        <button type="submit" class="btn btn-small btn-dark-solid ">
+                                                            Submit Review
+                                                        </button>
+                                                    </div>
+
+
+                                                </div>
+
+                                            </form>
+                                            <!--add review end-->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!--tabs border end-->
+                        </div>
+                    </div> 
+
+                    
+                    {% assign products = site.shop %}
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="heading-title-alt text-left ">
+                                <h3 class="text-uppercase">similar items </h3>
+                                <span class="text-uppercase">We have {{ products.size }} similar product currently in stock</span>
+                            </div>
+
+                            <!--portfolio carousel-->
+                            <div id="portfolio-carousel" class=" portfolio-with-title col-3 ">
+                            {% assign page_tags = page.tags | join: "" %}
+                            {% for product in products %}
+                                {% if page.id != product.id %}
+                                    {% for tag in product.tags %}
+                                        {% assign tag_aug =  tag | remove: "," | strip %}
+                                            {% if page_tags contains tag_aug %}
+                                        
+                               <div class="portfolio-item">
+                                    <div class="thumb">
+                                        <img src="{{ site.product-image-url }}/{{ product.image }}" alt="">
+                                        <div class="portfolio-hover">
+                                            <div class="action-btn">
+                                                <a href="{{ product.url }}"> <i class="icon-ecommerce_diamond"></i> 
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="portfolio-title">
+                                        <h4><a href="{{ product.url }}">{{ product.title }}</a></h4>
+                                        <p class="txt-xl">${{ product.price }}</p>
+                                    </div>
+                                </div>
+
+                                            {% break %}
+                                         {% else %} 
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}    
+
+                            </div>
+                            <!--portfolio carousel-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!--body content end-->

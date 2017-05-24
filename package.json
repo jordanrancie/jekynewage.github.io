@@ -1,8 +1,8 @@
 {
-  "name": "massive-markup",
-  "version": "1.0",
+  "name": "gday-digital-nomads",
+  "version": "1.0.0",
   "description": "My Personal Blog",
-  "author": "ThemeBucket",
+  "author": "Jordan Rancie",
   "license": "ISC",
   "main": "index.html",
   "repository": {
@@ -16,28 +16,20 @@
     "template"
   ],
   "devDependencies": {
-    "browser-sync": "^2.14.0",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-csscomb": "^3.0.7",
-    "gulp-cssmin": "^0.1.7",
-    "gulp-csso": "^2.0.0",
     "gulp-html-prettify": "0.0.1",
-    "gulp-inject": "^4.1.0",
     "gulp-plumber-notifier": "0.0.3",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
-    "stream-series": "^0.1.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BlackrockDigital/startbootstrap-new-age.git"
+    "gulp-clean-css": "^3.4.0",
+    "gulp-clean": "^0.3.2"
   },
   "dependencies": {
     "simple-line-icons": "^2.3.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "setup": "gulp setup",
+    "watch": "gulp"
   }
 }

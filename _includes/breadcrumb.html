@@ -1,0 +1,28 @@
+        {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+        <!--page title start-->
+        <section class="page-title">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 class="text-uppercase">{{ page.name }}</h4>
+                        <ol class="breadcrumb">
+                            <li><a href="/#">Home</a></li>
+                            {% for crumb in crumbs offset: 1 %}
+                            {% if forloop.last %}
+                            <li class="active">{{ page.title }}</li>
+                            {% else %}
+                                {% if forloop.index == 1 %}
+                            <li><a href="/{{ crumb }}/">{{ crumb | replace:'-',' ' | remove:'.html'}}</a></li>
+                            <!--A cheap hack - can only handle one level {{ forloop.index }} --- {{ forloop.index == '1' }} -->
+                                {% else %}
+                            <li>{{ crumb | replace:'-',' ' | remove:'.html'}}</li>
+                            <!--A cheap hack - can only handle one level -->
+                                {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--page title end-->
