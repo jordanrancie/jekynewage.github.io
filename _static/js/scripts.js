@@ -166,7 +166,7 @@
          Full screen banner init
          ===============================================*/
         $window.bind("resizeEnd", function () {
-            $("#fullscreen-banner").height($window.height() / 1.5);
+            $("#fullscreen-banner").height($window.height());
         });
 
         $window.resize(function () {

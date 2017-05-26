@@ -34,7 +34,7 @@
                             </div>
 
                             <div class="product-price txt-xl">
-                                <span class="border-tb p-tb-10"> ${{ page.price }} {% if page.discounted %}<del>${{ page.discounted }}</del>{% endif %}</span>
+                                <span class="border-tb p-tb-10"> {{ page.price }} {% if page.discounted %}<del>{{ page.discounted }}</del>{% endif %}</span>
                             </div>
                             {% if page.additional-details %}
                             <ul class="portfolio-meta m-bot-10 m-top-10">
@@ -49,7 +49,7 @@
                             <ul class="portfolio-meta m-bot-10 stock">
                                 <li><span><strong class="number-item"> 390</strong> Item </span>  <span class="status">In Stock</span></li>
                             </ul>
-                            -->
+                            
                             <div class="p-values">
                                 <ul class="portfolio-meta m-bot-10 ">
                                     <li>
@@ -77,7 +77,7 @@
                                     </li>
                                 </ul>
                             </div>
-
+                            -->
                             <div class="clearfix">
                                 <a href="{{ page.external-url }}" class="btn btn-medium btn-dark-solid  "><i class="fa fa-shopping-cart"></i> Buy Now </a>
                             </div>
@@ -135,40 +135,8 @@
                                                                 <a href="#">{{ review.name }}</a>
                                                             </div>
                                                             {{ review.date }}
-                                                            <span class="review-rating">
-                                                                {% case review.rating %}
-                                                                    {% when 1 %}
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star-o"></i>
-                                                                <i class="fa fa-star-o"></i>
-                                                                <i class="fa fa-star-o"></i>
-                                                                <i class="fa fa-star-o"></i>
-                                                                    {% when 2 %}
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>  
-                                                                <i class="fa fa-star-o"></i>
-                                                                <i class="fa fa-star-o"></i>
-                                                                <i class="fa fa-star-o"></i>  
-                                                                    {% when 3 %}
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>  
-                                                                <i class="fa fa-star-o"></i>
-                                                                <i class="fa fa-star-o"></i> 
-                                                                    {% when 4 %}
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star-o"></i>    
-                                                                    {% when 5 %}
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>    
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                                {% endcase %}
-                                                            </span>
+                                                            {% assign rating = review.rating %}
+                                                            {% include ratings.html %}
                                                         </div>
                                                         <p>{{ review.review }}</p>
                                                     </div>
@@ -237,25 +205,47 @@
 
                     
                     {% assign products = site.shop %}
+                    {% assign products_related = "" %}
+
+                    {% assign page_tags = page.tags | join : ',' %}
+                    {% assign page_cats = page.categories | join : "," %}
+                    {% assign page_ = page_tags | append : ',' | append : page_cats %}
+                    <!-- Page List is {{ page_ }} -->
+                    {% for product in products %}
+                        {% if page.id != product.id %}
+                            {% assign prod_tags = product.tags | join : "," %}
+                            {% assign prod_cats = product.categories | join : "," %}
+                            {% assign prod_list = prod_tags | append : "," | append : prod_cats %}
+                            {% assign prod_ = prod_list | split : "," %}
+                            <!-- Product List is {{ prod_list }} -->
+                            {% for tag in prod_ %}
+                                <!-- matcher is {{ tag }} -->
+                                {% if page_ contains tag %}
+                                    {% assign products_related = products_related | append : " " | append : product.id %}
+                                    <!-- new related list is {{ products_related }} -->
+                                    {% break %}
+                                {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}    
+
+                    {% assign arr = products_related | split : " " %}
+                    {% if arr.size > 0 %}
+                    {% assign arr2 = arr | join : " "  %}
                     <div class="row">
                         <div class="col-md-12">
 
                             <div class="heading-title-alt text-left ">
-                                <h3 class="text-uppercase">similar items </h3>
-                                <span class="text-uppercase">We have {{ products.size }} similar product currently in stock</span>
+                                <h3 class="text-uppercase">similar items</h3>
+                                <span class="text-uppercase">We have {{ arr.size }} similar product currently in stock</span>
                             </div>
 
                             <!--portfolio carousel-->
                             <div id="portfolio-carousel" class=" portfolio-with-title col-3 ">
-                            {% assign page_tags = page.tags | join: "" %}
                             {% for product in products %}
-                                {% if page.id != product.id %}
-                                    {% for tag in product.tags %}
-                                        {% assign tag_aug =  tag | remove: "," | strip %}
-                                            {% if page_tags contains tag_aug %}
-                                        
+                                {% if arr2 contains product.id %}
                                <div class="portfolio-item">
-                                    <div class="thumb">
+                                    <!--<div class="thumb">
                                         <img src="{{ site.product-image-url }}/{{ product.image }}" alt="">
                                         <div class="portfolio-hover">
                                             <div class="action-btn">
@@ -263,24 +253,31 @@
                                                 </a>
                                             </div>
                                         </div>
+                                    </div>-->
+                                    <div class="product-img">
+                                        <a href="{{ product.url }}"><img src="{{ site.product-image-url}}/{{ product.image }}" alt="{{ product.title }}"></a>
+                                        {% if product.discounted %}<div class="sale-label">Sale</div>{% endif %}
                                     </div>
                                     <div class="portfolio-title">
                                         <h4><a href="{{ product.url }}">{{ product.title }}</a></h4>
-                                        <p class="txt-xl">${{ product.price }}</p>
+                                        <p class="txt-xl">{{ product.price }}</p>
+                                        <del>{{ product.discounted }}</del>
+                                    </div> 
+                                    {% if product.rating %}
+                                    {% assign rating = product.rating %}
+                                    {% include ratings.html %}
+                                    {% endif %}
+                                    <div class="product-btn">
+                                        <a href="{{ page.external-url }}" class="btn btn-extra-medium btn-dark-solid  "><i class="fa fa-shopping-cart"></i> Buy Now</a>
                                     </div>
                                 </div>
-
-                                            {% break %}
-                                         {% else %} 
-                                        {% endif %}
-                                    {% endfor %}
                                 {% endif %}
                             {% endfor %}    
-
                             </div>
                             <!--portfolio carousel-->
                         </div>
                     </div>
+                    {% endif %}
                 </div>
             </div>
 

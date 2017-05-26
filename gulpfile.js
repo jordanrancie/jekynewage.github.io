@@ -9,7 +9,7 @@ var pkg = require('./package.json');
 
  
 gulp.task('clean', function () {
-    return gulp.src('./_site/static/*', {read: false})
+    return gulp.src(['./_site/static/*','_site/images/*'], {read: false})
         .pipe(plumberNotifier())
         .pipe(clean());
 });
