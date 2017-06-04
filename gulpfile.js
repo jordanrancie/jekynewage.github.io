@@ -18,6 +18,10 @@ gulp.task('copy-static', function() {
     return gulp.src(['./_static/**']).pipe(gulp.dest('./_site/static'));
 })
 
+gulp.task('copy-css', function() {
+    return gulp.src(['./_static/css/*']).pipe(gulp.dest('./_site/static/css'));
+})
+
 gulp.task('copy-images', function() {
     return gulp.src(['./_images/**']).pipe(gulp.dest('./_site/images'));
 })
@@ -29,12 +33,7 @@ gulp.task('copy-js', function() {
 
 // SASS to css
 gulp.task('sass', function(){
-    return gulp.src([
-            './_sass/style.scss',
-            './_sass/shortcodes/shortcodes.scss',
-            './_sass/default-theme.scss',
-            './_sass/red-theme.scss',
-            './_sass/green-theme.scss'])
+    return gulp.src('./_sass/style.scss')
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(gulp.dest("./_site/static/css"));
 });
@@ -55,15 +54,14 @@ gulp.task("html-prettify", function() {
 });
 
 gulp.task("minify-css", ['sass'], function() {
-    return gulp.src([
-        './_site/static/css/style.css',
-        './_site/static/css/shortcodes.css',
-        './_site/static/css/default-theme.css',
-        './_site/static/css/red-theme.css',
-        './_site/static/css/green-theme.css'])
+    return gulp.src('./_site/static/css/style.css')
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest("./_site/static/css"));
+});
+
+gulp.task('watch:css', function () {
+  gulp.watch('./_static/css/*.css', ['copy-css']);
 });
 
 gulp.task('watch:sass', function () {
@@ -77,3 +75,4 @@ gulp.task('watch:js', function () {
 
 gulp.task('default', ['copy-images', 'copy-static', 'minify-js', 'minify-css', 'watch:sass', 'watch:js']);
 gulp.task('setup', ['copy-images', 'copy-static', 'minify-js', 'minify-css']);
+gulp.task('watch', ['watch:css', 'watch:sass', 'watch:js']);

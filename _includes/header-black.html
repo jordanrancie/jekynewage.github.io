@@ -1,7 +1,7 @@
         <!--header start-->
         <header class="l-header">
             <div class="l-navbar l-navbar_expand l-navbar_t-dark js-navbar-sticky">
-                <div class="container-fluid">
+                <div class="container">
                     <nav class="menuzord js-primary-navigation" role="navigation" aria-label="Primary Navigation">
 
                         <!--logo start-->
@@ -11,17 +11,17 @@
                         <!--logo end-->
 
                         <!--mega menu start-->
-                        <ul class="menuzord-menu menuzord-right c-nav_s-bg">
+                        <ul class="menuzord-menu menuzord-right op-nav c-nav_s-bg">
                             {% for link in nav %}
-                            <li><a href="{{link.url}}" title="{{link.description}}">{{link.title}}</a>
+                            <li{%if link.class %} class="{{ link.class }}"{% endif %}{% if link.additional %} {{ link.additional }}><a href="javascript:void(0)"{% else %}><a href="{{link.url}}"{% endif %} title="{{link.description}}">{{link.title}}</a>
                                 {% if link.dropdown %}
                                     <ul class="dropdown">
                                     {% for subLink in link.dropdown %}
-                                        <li><a href="{{subLink.url}}" title="{{subLink.description}}">{{subLink.title}}</a>
+                                        <li{%if subLink.class %} class="{{ subLink.class }}"{% endif %}><a href="{{subLink.url}}" title="{{subLink.description}}">{{subLink.title}}</a>
                                         {% if subLink.dropdown %}
                                         <ul class="dropdown">
                                         {% for subSubLink in subLink.dropdown %}
-                                            <li><a href="{{subSubLink.url}}" title="{{subSubLink.description}}">{{subSubLink.title}}</a></li>
+                                            <li{%if subSubLink.class %} class="{{ subSubLink.class }}"{% endif %}><a href="{{subSubLink.url}}" title="{{subSubLink.description}}">{{subSubLink.title}}</a></li>
                                         {%endfor %}
                                         </ul>
                                         {% endif %}
@@ -31,8 +31,6 @@
                                 {% endif %}
                             </li>  
                             {%endfor%}
-                            <li class="nav-divider" aria-hidden="true"><a href="javascript:void(0)">|</a></li>
-                            <li><a href="/#contact" title="Contact Us">Contact Us</a>
                             <li>
                                 <a href="javascript:void(0)"><i class="fa fa-search"></i> Search</a>
                                 <div class="megamenu megamenu-quarter-width navbar-search">
