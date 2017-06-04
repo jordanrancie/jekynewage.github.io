@@ -2,10 +2,12 @@
     carousel
 -------------------------------------------------------------------*/
 
-#img-carousel .item {
+#img-carousel .item,
+#app-carousel .item {
     margin: 5px;
 }
-#img-carousel .item img {
+#img-carousel .item img,
+#app-carousel .item img {
     display: block;
     width: 100%;
     height: auto;

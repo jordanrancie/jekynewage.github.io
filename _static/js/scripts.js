@@ -47,8 +47,7 @@
         if (typeof smoothScroll == "object") {
             smoothScroll.init();
         }
-
-
+   
         /*==============================================
          Menuzord init
          ===============================================*/
@@ -415,76 +414,53 @@
          Carousel init
          ===============================================*/
         if ($.fn.owlCarousel) {
-            $("#clients-1").owlCarousel({
-                autoPlay: 3000, //Set AutoPlay to 3 seconds
-                items: 6,
-                itemsDesktop: [1199, 3],
-                itemsDesktopSmall: [979, 3]
+
+            $("#img-carousel").owlCarousel({
+                autoplay:true,
+                autoplayTimeout:2000,
+                dots: false,
+                autoWidth: true,
+                navigation: true,
+                pagination: false,
+                navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
 
             });
 
-            $("#testimonial-2").owlCarousel({
-                autoPlay: 3000, //Set AutoPlay to 3 seconds
-                items: 1
-            });
+            $("#app-carousel").owlCarousel({
+                autoplay:true,
+                autoplayTimeout:2000,
+                dots: true,
+                items: 1,
+                navigation: false,
+                pagination: true,
+                navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
 
-            $("#testimonial-3").owlCarousel({
-                autoPlay: 4000, //Set AutoPlay to 3 seconds
-                items: 1
-            });
-
-            $("#testimonial-4").owlCarousel({
-                autoPlay: 3000, //Set AutoPlay to 3 seconds
-                items: 1
-            });
-
-            $("#testimonial-5").owlCarousel({
-                autoPlay: 3000, //Set AutoPlay to 3 seconds
-                items: 1
-            });
-
-            $("#carousel-object").owlCarousel({
-                autoPlay: 4000, //Set AutoPlay to 3 seconds
-                items: 1
-                //pagination : false
             });
 
             $("#owl-slider").owlCarousel({
-                autoPlay: 4000, //Set AutoPlay to 3 seconds
+                autoPlay: 8000, //Set AutoPlay to 3 seconds
                 items: 1,
                 navigation: true,
                 //pagination : false,
                 navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
             });
 
-            $("#img-carousel").owlCarousel({
-                autoPlay: 3000, //Set AutoPlay to 3 seconds
-                items: 4,
-                itemsDesktop: [1199, 3],
-                itemsDesktopSmall: [979, 3]
-
-            });
-
-            $("#portfolio-carousel").owlCarousel({
-                autoPlay: 3000, //Set AutoPlay to 3 seconds
-                items: 3,
-                itemsDesktop: [1199, 3],
-                itemsDesktopSmall: [979, 3],
-                navigation: true,
-                pagination: false,
-                navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
-
-            });
-
             $("#portfolio-carousel-alt").owlCarousel({
-                autoPlay: false, //Set AutoPlay to 3 seconds
-                items: 3,
-                itemsDesktop: [1199, 3],
-                itemsDesktopSmall: [979, 3],
-                navigation: true,
-                pagination: false,
-                navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
+                autoplay:true,
+                autoplayTimeout:2000,
+                dots: true,
+                nav: true,
+                pagination: true,
+                navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
+
             });
+
+         
+            $("#testimonial-5").owlCarousel({
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+                items: 1
+            });
+
         }
 
         $(".portfolio-with-title").addClass("portfolio");
@@ -496,7 +472,7 @@
         if (typeof Typist == "function") {
             new Typist(document.querySelector(".typist-element"), {
                 letterInterval: 60,
-                textInterval: 3000
+                textInterval: 8000
             });
         }
 

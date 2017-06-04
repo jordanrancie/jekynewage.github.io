@@ -1,60 +1,96 @@
 - title: Home
-  url: "/#"
-  description: "Main Home Page"
+  url: "/#home"
+  description: "GDay Digital Nomads Home Page"
 
-
-- title: "Latest Adventures / Blog"
+- title: "Latest Adventures"
   url: "#latest-adventures"
   description: "Recent posts on digital nomadic life around the world"
 
 - title: "Featured Apps"
-  url: "/featured-apps/"
-  description: "Latest Prototype Apps"
+  url: "#featured-apps"
+  description: "Latest Apps worth looking at"
   dropdown:
-  - title: "Featured App 1"
-    url: "/featured-apps/app1/"
-    description: "App 1 description"
-  - title: "Featured App 2"
-    url: "/featured-apps/app2/"
-    description: "App 2 description"    
-
-- title: "Digital Nomad Retreats"
-  url: "#coding-retreat"
-  description: "Getaways to become a digital nomad"
-  dropdown:
-  - title: "Bali"
-    url: "/coding-retreat/bali/"
-    description: "Indonesia Coding Retreat"
-  - title: "Mexico"
-    url: "/coding-retreat/mexico/"
-    description: "Mexico Coding Retreat"
+  - title: "OneVote"
+    url: "/#one-vote"
+    description: "Democracy in an App"
+    class: camelcase
+  - title: "Link'n'Sync"
+    url: "/#link-n-sync"
+    description: "Synchronously sharing media on all your devices"
+    class: camelcase
+  - title: "One-Tube"
+    url: "/#one-tube"
+    description: "Decentralised Peer-2-Peer Video Sharing on the web"    
+    class: camelcase    
+  - title: "Peer-2-Peer Smart Energy"
+    url: "/#p2p-smart-energy"
+    description: "Decentralised Peer-2-Peer selling of energy for communities"    
+    class: camelcase    
+  - title: "Sustainable Living Platform"
+    url: "/#sustainable-living-platform"
+    description: "Creating sustainable homes on a digital platform"            
+    class: camelcase    
+  - title: "The Travellers Wallet"
+    url: "/#travellers-wallet"
+    description: "Wallet, Banking & Budgeting for travellers"
+    class: camelcase
 
 - title: "Services"
   url: "#services"
-  description: "List of services"
+  description: "Our services"  
   dropdown:
-  - title: "Online Yoga"
-    url: "/yoga/"
-    description: "Yoga"  
-  - title: "Travel Packages"
-    url: "/travel/"
-    description: "Travel Packages"  
-  - title: "IT Services"
-    url: "/it-services/"
-    description: "IT Services"    
+  - title: "Web Design & Development"
+    url: "/#service-web"
+    description: ""
+    icon: icon-browser2        
+  - title: "App Development"
+    url: "/#service-app"
+    description: ""         
+    icon: icon-mobile     
+  - title: "Core Programming"
+    url: "/#service-core"
+    description: ""          
+    icon: fa fa-code
+  - title: "Cloud Services"
+    url: "/#service-cloud"
+    description: ""
+    icon: icon-cloud          
+  - title: "Latest Technologies"
+    url: "/#Latest-technologies"
+    description: ""              
+    icon: icon-genius
+  - title: "Project / Talent Management"
+    url: "/#project-talent-management"
+    description: ""  
+    icon: icon-basic_watch            
 
-- title: "Shop"
-  url: "/shop/"
+- title: "About Me"
+  url: "#about-me"
+  description: "About Me"
+
+
+- title: "Contact Me"
+  url: "#contact"
+  description: ""
+
+- title: "|"
+  class: nav-divider
+  additional: "aria-hidden='true'"
+
+- title: "Blog"
+  url: "/blog/"
   description: "Another online shop"
   dropdown:
-  - title: "Category One"
+  - title: "Latest Articles"
     url: "/shop/category-one/"
     description: "Category 1 description"
-  - title: "Category Two"
+  - title: "Most Popular"
     url: "/shop/category-tow/"
     description: "Category 2 description"    
-
-- title: "About Us"
-  url: "#about-us"
-  description: "About Us"
+  - title: "Travel"
+    url: "/shop/category-tow/"
+    description: "Category 2 description"    
+  - title: "Technology"
+    url: "/shop/category-tow/"
+    description: "Category 2 description"    
 
