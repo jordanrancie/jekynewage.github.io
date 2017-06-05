@@ -51,16 +51,16 @@
     url: "/#service-core"
     description: ""          
     icon: fa fa-code
-  - title: "Cloud Services"
-    url: "/#service-cloud"
+  - title: "Cloud / Big Data"
+    url: "/#service-cloud-bigdata"
     description: ""
     icon: icon-cloud          
-  - title: "Latest Technologies"
-    url: "/#Latest-technologies"
+  - title: "Enterprise Architecture"
+    url: "/#service-enterprise-architecture"
     description: ""              
-    icon: icon-genius
-  - title: "Project / Talent Management"
-    url: "/#project-talent-management"
+    icon: icon-circle-compass
+  - title: "Project Management"
+    url: "/#service-project-management"
     description: ""  
     icon: icon-basic_watch            
 

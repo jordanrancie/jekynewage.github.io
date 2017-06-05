@@ -24,8 +24,13 @@
     <script src="{{ site.resource-url }}/vendor/typist/typist.js"></script>
     <script src="{{ site.resource-url }}/vendor/visible/visible.js"></script>
     <script src="{{ site.resource-url }}/vendor/wow/wow.min.js"></script>
-    <!-- legible -->
+    {% if jekyll.environment == "production" %}
+    <!-- prod -->
+    <script src="{{ site.resource-url }}/js/scripts.min.js"></script>
+    {% else %}
+    <!-- dev -->
     <script src="{{ site.resource-url }}/js/scripts.js"></script>
+    {% endif %}
     <!-- illegible
       <script src="{{ site.resource-url }}/js/scripts.min.js"></script>
     -->

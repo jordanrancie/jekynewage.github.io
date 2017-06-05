@@ -15,15 +15,15 @@ gulp.task('clean', function () {
 });
 
 gulp.task('copy-static', function() {
-    return gulp.src(['./_static/**']).pipe(gulp.dest('./_site/static'));
+    return gulp.src(['./static/**']).pipe(gulp.dest('./_site/static'));
 })
 
-gulp.task('copy-css', function() {
-    return gulp.src(['./_static/css/*']).pipe(gulp.dest('./_site/static/css'));
+gulp.task('copy-css', ['sass'], function() {
+    return gulp.src(['./static/css/*']).pipe(gulp.dest('./_site/static/css'));
 })
 
 gulp.task('copy-images', function() {
-    return gulp.src(['./_images/**']).pipe(gulp.dest('./_site/images'));
+    return gulp.src(['./images/**']).pipe(gulp.dest('./_site/images'));
 })
 
 gulp.task('copy-js', function() {
@@ -32,18 +32,18 @@ gulp.task('copy-js', function() {
 })
 
 // SASS to css
-gulp.task('sass', function(){
+gulp.task('sass',function(){
     return gulp.src('./_sass/style.scss')
         .pipe(sass.sync().on('error', sass.logError))
-        .pipe(gulp.dest("./_site/static/css"));
+        .pipe(gulp.dest("./static/css"));
 });
 
 gulp.task("minify-js", function() {
-     return gulp.src("./_static/js/scripts.js")
+     return gulp.src("./static/js/scripts.js")
         .pipe(plumberNotifier())
         .pipe(uglify())
         .pipe(rename({suffix:".min"}))
-        .pipe(gulp.dest("./_site/static/js/"));
+        .pipe(gulp.dest("./static/js/"));
 
 });
 
@@ -54,14 +54,14 @@ gulp.task("html-prettify", function() {
 });
 
 gulp.task("minify-css", ['sass'], function() {
-    return gulp.src('./_site/static/css/style.css')
+    return gulp.src('./static/css/style.css')
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest("./_site/static/css"));
+        .pipe(gulp.dest("./static/css"));
 });
 
 gulp.task('watch:css', function () {
-  gulp.watch('./_static/css/*.css', ['copy-css']);
+  gulp.watch('./static/css/*.css', ['copy-css']);
 });
 
 gulp.task('watch:sass', function () {
@@ -69,7 +69,7 @@ gulp.task('watch:sass', function () {
 });
 
 gulp.task('watch:js', function () {
-  gulp.watch("./_static/js/scripts.js", ['copy-js','minify-js']);
+  gulp.watch("./static/js/scripts.js", ['copy-js','minify-js']);
 });
 
 
