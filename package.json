@@ -30,6 +30,7 @@
     "simple-line-icons": "^2.3.2"
   },
   "scripts": {
+    "jekyll":  "gulp setup && jekyll serve --profile --config _config.dev.yml --host=0.0.0.0",
     "setup": "gulp setup",
     "clean": "gulp clean",
     "watch": "gulp"

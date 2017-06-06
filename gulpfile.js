@@ -14,54 +14,55 @@ gulp.task('clean', function () {
         .pipe(clean());
 });
 
-gulp.task('copy-static', function() {
-    return gulp.src(['./_static/**']).pipe(gulp.dest('./_site/static'));
-})
-
-gulp.task('copy-css', function() {
-    return gulp.src(['./_static/css/*']).pipe(gulp.dest('./_site/static/css'));
-})
-
-gulp.task('copy-images', function() {
-    return gulp.src(['./_images/**']).pipe(gulp.dest('./_site/images'));
-})
+// Helpers
+gulp.task('copy-css', ['sass'], function() {
+    return gulp.src(['./static/css/*']).pipe(gulp.dest('./_site/static/css'));
+});
 
 gulp.task('copy-js', function() {
     return gulp.src(['./_static/js/*.js'])
         .pipe(gulp.dest('./_site/static/js'));
-})
-
-// SASS to css
-gulp.task('sass', function(){
-    return gulp.src('./_sass/style.scss')
-        .pipe(sass.sync().on('error', sass.logError))
-        .pipe(gulp.dest("./_site/static/css"));
 });
 
+
+// SASS to css
+gulp.task('sass',function(){
+    return gulp.src('./_sass/style.scss')
+        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(gulp.dest("./static/css"));
+});
+
+// Minification
 gulp.task("minify-js", function() {
-     return gulp.src("./_static/js/scripts.js")
+     return gulp.src("./static/js/scripts.js")
         .pipe(plumberNotifier())
         .pipe(uglify())
         .pipe(rename({suffix:".min"}))
-        .pipe(gulp.dest("./_site/static/js/"));
+        .pipe(gulp.dest("./static/js/"));
 
-});
-
-gulp.task("html-prettify", function() {
-    return gulp.src('./*.html')
-        .pipe(prettify({indent_char: " ", indent_size: 2}))
-        .pipe(gulp.dest("./"));
 });
 
 gulp.task("minify-css", ['sass'], function() {
-    return gulp.src('./_site/static/css/style.css')
+    return gulp.src('./static/css/style.css')
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest("./_site/static/css"));
+        .pipe(gulp.dest("./static/css"));
 });
 
+// Copy Resources
+gulp.task('copy-static', ['minify-js', 'minify-css',], function() {
+    return gulp.src(['./static/**']).pipe(gulp.dest('./_site/static'));
+})
+
+
+gulp.task('copy-images', function() {
+    return gulp.src(['./images/**']).pipe(gulp.dest('./_site/images'));
+})
+
+
+// Watch tasks
 gulp.task('watch:css', function () {
-  gulp.watch('./_static/css/*.css', ['copy-css']);
+  gulp.watch('./static/css/*.css', ['copy-css']);
 });
 
 gulp.task('watch:sass', function () {
@@ -69,10 +70,10 @@ gulp.task('watch:sass', function () {
 });
 
 gulp.task('watch:js', function () {
-  gulp.watch("./_static/js/scripts.js", ['copy-js','minify-js']);
+  gulp.watch("./static/js/scripts.js", ['copy-js','minify-js']);
 });
 
 
-gulp.task('default', ['copy-images', 'copy-static', 'minify-js', 'minify-css', 'watch:sass', 'watch:js']);
-gulp.task('setup', ['copy-images', 'copy-static', 'minify-js', 'minify-css']);
+gulp.task('default', ['copy-images', 'copy-static', 'watch']);
+gulp.task('setup', ['copy-images', 'copy-static']);
 gulp.task('watch', ['watch:css', 'watch:sass', 'watch:js']);

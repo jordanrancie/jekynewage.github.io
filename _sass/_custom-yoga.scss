@@ -1,19 +1,16 @@
 /* test css */
 
-.camelcase {
-	text-transform: none;
+.banner-background-auroville {
+    background-image: url(../img/about/auroville-audz.jpg);
+    background-position: 50% 0;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+    background-repeat: no-repeat;
+    padding: 200px 0;
+    height: 630px;
 }
 
-.dark-feature {
-
-	h1,h2,h3,h4,h5 {
-		color: #CCCCCC;
-	},
-	p,ul,.desc {
-		color: #7e7e7e;
-	}
-}
-div .dark-feature-bg {
+div .dark-feature {
 	background-color: #222222;
 }
 
@@ -47,24 +44,7 @@ div .playful-feature-parallax {
 }
 
 .custom-parallax-3 {
-  background-blend-mode: multiply;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: 0px 0px;  
-  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.4), rgba(0,0,0,1)) /* For Safari 5.1 to 6.0 */, url("../img/services/web-design-heroshot.jpg");
-  background-image: -o-linear-gradient(right, rgba(0,0,0,0.4), rgba(0,0,0,1)) /* For Opera 11.1 to 12.0 */, url("../img/services/web-design-heroshot.jpg");
-  background-image: -moz-linear-gradient(right, rgba(0,0,0,0.4), rgba(0,0,0,1)) /* For Firefox 3.6 to 15 */, url("../img/services/web-design-heroshot.jpg");
-  background-image: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,1)) /* Standard syntax (must be last) */, url("../img/services/web-design-heroshot.jpg");
-    
-}
-
-.pm-bg {
-  background-attachment: absolute;
-  right: 150px;
-  top: 150px;
-  background-repeat: no-repeat;
-  background-image: url("../img/services/project-management.jpg")!important;
+  background-image: url("../img/services/web-design-heroshot.jpg")!important;
 }
 
 .border-left-bottom h1,
@@ -193,32 +173,6 @@ a:hover .featured-item.feature-bg-box .icon {
 }
 a:hover .featured-item.feature-bg-box .icon i {
     color: #FFF!important;
-}
-
-
-@media screen and (max-width: 768px) {
-
-    //header {
-    //    top:0;
-    //}
-    .page-title{
-        margin-top: 0px!important;
-    }
-  }
-
-
-/* ----------------------------------------------------------------
-   big background page title
------------------------------------------------------------------*/
-
-.about-me {
-    background-image: url(../img/about/02.jpg);
-    background-position: 50% 0;
-    background-size: cover;
-    /*background-attachment: fixed;*/
-    background-repeat: no-repeat;
-    padding: 200px 0;
-    height: 630px;
 }
 
 

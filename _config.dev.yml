@@ -35,7 +35,8 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 include: ["_pages"]
-exclude: ["node_modules","gulpfile.js","package.json","README.md","LICENSE","CNAME"]
+exclude: ["node_modules","gulpfile.js","package.json","README.md","LICENSE","CNAME","static","images"]
+keep_files: ["static","images"]
 permalink: pretty
 collections:
   shop:

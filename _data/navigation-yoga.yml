@@ -1,0 +1,53 @@
+- title: Home
+  url: "/#home"
+  description: "GDay Yogis"
+
+- title: "About Me"
+  url: "#about-me"
+  description: "About Me"
+
+- title: "Calendar"
+  url: "#latest-adventures"
+  description: "Recent posts on digital nomadic life around the world"
+
+- title: "Services"
+  url: "#services"
+  description: "Healthy life style"  
+  dropdown:
+  - title: "Yoga/Fitness coaching"
+    url: "/#service-app/"
+    description: ""
+  - title: "Retreat"
+    url: "/#service-web"
+    description: ""
+    icon: icon-browser2        
+  - title: "CranioSacral Therapy"
+    url: "/#service-app"
+    description: ""         
+    icon: fa fa-sun-o           
+
+- title: "Contact Me"
+  url: "#contact"
+  description: ""
+
+- title: "|"
+  class: nav-divider
+  additional: "aria-hidden='true'"
+
+- title: "Blog"
+  url: "/blog/"
+  description: "Another online shop"
+  dropdown:
+  - title: "Latest Articles"
+    url: "/shop/category-one/"
+    description: "Category 1 description"
+  - title: "Most Popular"
+    url: "/shop/category-tow/"
+    description: "Category 2 description"    
+  - title: "Travel"
+    url: "/shop/category-tow/"
+    description: "Category 2 description"    
+  - title: "Technology"
+    url: "/shop/category-tow/"
+    description: "Category 2 description"    
+
