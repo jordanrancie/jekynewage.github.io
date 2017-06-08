@@ -437,6 +437,12 @@
 
             });
 
+            
+            $("#testimonial-4").owlCarousel({
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+                items: 1
+            });
+
             $("#owl-slider").owlCarousel({
                 autoPlay: 8000, //Set AutoPlay to 3 seconds
                 items: 1,

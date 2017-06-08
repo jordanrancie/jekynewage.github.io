@@ -1,33 +1,33 @@
 - title: Home
-  url: "/#home"
+  url: "/#home-yoga"
   description: "GDay Yogis"
 
 - title: "About Me"
-  url: "#about-me"
+  url: "/#about-audrey"
   description: "About Me"
 
-- title: "Calendar"
-  url: "#latest-adventures"
-  description: "Recent posts on digital nomadic life around the world"
-
-- title: "Services"
-  url: "#services"
+- title: "Offerings"
+  url: "#offering-audrey"
   description: "Healthy life style"  
   dropdown:
   - title: "Yoga/Fitness coaching"
-    url: "/#service-app/"
+    url: "#offering-audrey"
     description: ""
   - title: "Retreat"
-    url: "/#service-web"
+    url: "#offering-audrey"
     description: ""
-    icon: icon-browser2        
+    icon:         
   - title: "CranioSacral Therapy"
-    url: "/#service-app"
+    url: "#offering-audrey"
     description: ""         
-    icon: fa fa-sun-o           
+    icon:     
+  - title: "web developpement"
+    url: "/#offering-audrey"
+    description: ""         
+    icon:         
 
 - title: "Contact Me"
-  url: "#contact"
+  url: "#contact-audrey"
   description: ""
 
 - title: "|"
@@ -35,8 +35,8 @@
   additional: "aria-hidden='true'"
 
 - title: "Blog"
-  url: "/blog/"
-  description: "Another online shop"
+  url: "#blog-audrey"
+  description: "travel healthy Blog"
   dropdown:
   - title: "Latest Articles"
     url: "/shop/category-one/"
@@ -44,10 +44,13 @@
   - title: "Most Popular"
     url: "/shop/category-tow/"
     description: "Category 2 description"    
+  - title: "Yoga"
+    url: "/shop/category-tow/"
+    description: "Category 2 description"    
   - title: "Travel"
     url: "/shop/category-tow/"
-    description: "Category 2 description"    
-  - title: "Technology"
+    description: "Category 2 description" 
+  - title: "Healthy"
     url: "/shop/category-tow/"
-    description: "Category 2 description"    
+    description: "Category 2 description"   
 
