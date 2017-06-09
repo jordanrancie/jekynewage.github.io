@@ -9654,3 +9654,16 @@ a:hover .featured-item.feature-bg-box .icon i {
 #testimonial-centered .col-md-6 {
   margin-left: 500px;
   text-align: center; }
+
+#yoga-instructor {
+  background-color: #F2E2E0;
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+
+.title-pink h4 {
+  color: #818387;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  margin: 0 0 30px 0;
+  font-weight: normal; }

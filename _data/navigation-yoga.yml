@@ -35,7 +35,7 @@
   additional: "aria-hidden='true'"
 
 - title: "Blog"
-  url: "#blog-audrey"
+  url: "#blog-audrey "
   description: "travel healthy Blog"
   dropdown:
   - title: "Latest Articles"
