@@ -106,60 +106,6 @@
         }
         initSticky();
 
-        /*==============================================
-         Flex slider init
-         ===============================================*/
-        $window.load(function () {
-            $(".portfolio-slider").flexslider({
-                animation: "slide",
-                direction: "vertical",
-                slideshowSpeed: 3000,
-                start: function () {
-                    imagesLoaded($(".portfolio"), function () {
-                        setTimeout(function () {
-                            $(".portfolio-filter li:eq(0) a").trigger("click");
-                        }, 500);
-                    });
-                }
-            });
-        });
-
-        $window.load(function () {
-            $(".portfolio-slider-alt").flexslider({
-                animation: "slide",
-                direction: "horizontal",
-                slideshowSpeed: 4000,
-                start: function () {
-                    imagesLoaded($(".portfolio"), function () {
-                        setTimeout(function () {
-                            $(".portfolio-filter li:eq(0) a").trigger("click");
-                        }, 500);
-                    });
-                }
-            });
-        });
-
-        $window.load(function () {
-            $(".post-slider-thumb").flexslider({
-                animation: "slide",
-                controlNav: "thumbnails"
-            });
-        });
-
-        $window.load(function () {
-            $(".post-slider").flexslider({
-                animation: "slide"
-                //slideshow: false
-            });
-        });
-
-        $window.load(function () {
-            $(".news-slider").flexslider({
-                animation: "slide",
-                slideshowSpeed: 3000
-            });
-        });
-
 
         /*==============================================
          Full screen banner init
@@ -441,7 +387,8 @@
                 autoPlay: 8000, //Set AutoPlay to 3 seconds
                 items: 1,
                 navigation: true,
-                //pagination : false,
+                pagination : false,
+                dots: true,
                 navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
             });
 
@@ -464,17 +411,6 @@
         }
 
         $(".portfolio-with-title").addClass("portfolio");
-
-
-        /*==============================================
-         Typist init
-         ===============================================*/
-        if (typeof Typist == "function") {
-            new Typist(document.querySelector(".typist-element"), {
-                letterInterval: 60,
-                textInterval: 8000
-            });
-        }
 
 
         /*==============================================
@@ -514,20 +450,22 @@
     });
 
     function initMailer() {
+        var url = 'http://localhost:9100/api/mailer/gday'
+
+
         if (!$.fn.validator) {
             return;
         }
 
         $(".js-Mailer").validator().on("submit", function(e) {
-            var $form     = $(this),
-                $btn      = $form.find("[type='submit']"),
-                $response = $("<div />", {
-                    "class": "alert js-Response",
+            var $form     = $(this)
+            var $response = $("<div />", {
+                    "class": "alert js-Response text-center",
                     "style": "margin-top: 20px; display:none"
                     });
 
             if (!$form.data("isready")) {
-                $btn.after($response);
+                $form.after($response);
                 $form.data("isready", true);
             }
 
@@ -536,41 +474,49 @@
             }
             e.preventDefault();
 
-            $.post(
-                "mailer/mailer.php",
-                $form.serialize()
+            $.post(url, $form.serialize()
             ).done(function(r) {
-                var $rHolder = $form.find(".js-Response");
-                if (r.success) {
-                    showMailerResponse($rHolder, "Your message has been sent.");
+                var res = JSON.parse(r);
+                if (res.success == true) {
+                    showMailerResponse($form, $response, "Thank you. Your message has been sent.");
                 } else {
-                    showMailerResponse($rHolder, "There is something wrong, try again!", "warning");
+                    showMailerResponse($form, $response, "Woops. There is something wrong, try again!", "warning");
                 }
             }).fail(function() {
-                showMailerResponse($form.find(".js-Response"), "There is something wrong, try again!", "warning");
+                showMailerResponse(null, $response, "Oh no! Failed!", "warning");
             })
         });
     }
 
-    function showMailerResponse($holder, rMessage, rType) {
+    function showMailerResponse($aForm, $holder, rMessage, rType) {
         var rClass = "alert-warning",
             aClass = "alert-success",
-            SPEED  = 1000;
+            SPEED  = 3000;
 
         rType = rType || "success";
 
         if (rType === "warning") {
             rClass = "alert-success",
             aClass = "alert-warning";
+
+            $holder
+                .removeClass(rClass)
+                .addClass(aClass)
+                .text(rMessage)
+                .slideDown()
+                .delay(SPEED)
+                .slideUp();  
+
+        } else {
+            $aForm.addClass('hidden');
+            $holder
+                .removeClass(rClass)
+                .addClass(aClass)
+                .text(rMessage)
+                .slideDown();
         }
 
-        $holder
-            .removeClass(rClass)
-            .addClass(aClass)
-            .text(rMessage)
-            .slideDown()
-            .delay(SPEED)
-            .slideUp();
+
     }
 
 })(jQuery);
