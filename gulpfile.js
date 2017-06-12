@@ -20,7 +20,7 @@ gulp.task('copy-css', ['sass'], function() {
 });
 
 gulp.task('copy-js', function() {
-    return gulp.src(['./_static/js/*.js'])
+    return gulp.src(['./static/js/*.js'])
         .pipe(gulp.dest('./_site/static/js'));
 });
 

@@ -3,11 +3,11 @@
   description: "GDay Digital Nomads Home Page"
 
 - title: "Latest Adventures"
-  url: "#latest-adventures"
+  url: "/#latest-adventures"
   description: "Recent posts on digital nomadic life around the world"
 
 - title: "Featured Apps"
-  url: "#featured-apps"
+  url: "/#featured-apps"
   description: "Latest Apps worth looking at"
   dropdown:
   - title: "OneVote"
@@ -36,7 +36,7 @@
     class: camelcase
 
 - title: "Services"
-  url: "#services"
+  url: "/#services"
   description: "Our services"  
   dropdown:
   - title: "Web Design & Development"
@@ -65,7 +65,7 @@
     icon: icon-basic_watch            
 
 - title: "About Me"
-  url: "#about-me"
+  url: "/#about-me"
   description: "About Me"
 
 

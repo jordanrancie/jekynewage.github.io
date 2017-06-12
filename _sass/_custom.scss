@@ -59,6 +59,16 @@ div .playful-feature-parallax {
     
 }
 
+.page-title.about-me-background {
+    background-image: url(../img/about/profile.jpg);
+    background-position: 50% 0;
+    background-size: cover;
+    /*background-attachment: fixed;*/
+    background-repeat: no-repeat;
+    padding: 200px 0;
+    height: 630px;
+}
+
 .pm-bg {
   background-attachment: absolute;
   right: 150px;
@@ -219,6 +229,10 @@ a:hover .featured-item.feature-bg-box .icon i {
     background-repeat: no-repeat;
     padding: 200px 0;
     height: 630px;
+}
+
+.contact-comments .cmnt-text {
+    height: 150px;
 }
 
 
