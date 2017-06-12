@@ -1,0 +1,56 @@
+- title: Home
+  url: "/#home-yoga"
+  description: "GDay Yogis"
+
+- title: "About Me"
+  url: "/#about-audrey"
+  description: "About Me"
+
+- title: "Offerings"
+  url: "#offering-audrey"
+  description: "Healthy life style"  
+  dropdown:
+  - title: "Yoga/Fitness coaching"
+    url: "#offering-audrey"
+    description: ""
+  - title: "Retreat"
+    url: "#offering-audrey"
+    description: ""
+    icon:         
+  - title: "CranioSacral Therapy"
+    url: "#offering-audrey"
+    description: ""         
+    icon:     
+  - title: "web developpement"
+    url: "/#offering-audrey"
+    description: ""         
+    icon:         
+
+- title: "Contact Me"
+  url: "#contact-audrey"
+  description: ""
+
+- title: "|"
+  class: nav-divider
+  additional: "aria-hidden='true'"
+
+- title: "Blog"
+  url: "#blog-audrey "
+  description: "travel healthy Blog"
+  dropdown:
+  - title: "Latest Articles"
+    url: "/shop/category-one/"
+    description: "Category 1 description"
+  - title: "Most Popular"
+    url: "/shop/category-tow/"
+    description: "Category 2 description"    
+  - title: "Yoga"
+    url: "/shop/category-tow/"
+    description: "Category 2 description"    
+  - title: "Travel"
+    url: "/shop/category-tow/"
+    description: "Category 2 description" 
+  - title: "Healthy"
+    url: "/shop/category-tow/"
+    description: "Category 2 description"   
+

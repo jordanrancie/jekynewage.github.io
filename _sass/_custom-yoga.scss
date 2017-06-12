@@ -1,0 +1,55 @@
+/* test css */
+
+
+.banner-box-hawaii {
+  background-image: url("../img/header-hawaii-sunset.jpg")!important;
+}
+
+
+.text-uppercase light-txt .title-a {
+  color: #ffffff;
+  
+}
+
+.timeline-parallax-1 {
+    background-color: #F2E2E0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.timeline.dark-1:before {
+    background-color:#fff;
+    bottom:0px;
+    content:"";
+    left:50%;
+    position:absolute;
+    top:30px;
+    width:2px;
+    z-index:0;
+}
+
+#testimonial-centered .col-md-6 {
+  margin-left:500px;
+  text-align:center;
+
+}
+
+#yoga-instructor {
+
+  background-color: #F2E2E0;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.title-pink h4 {
+  color:#818387;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  margin: 0 0 30px 0;
+  font-weight: normal;
+}
+
+
