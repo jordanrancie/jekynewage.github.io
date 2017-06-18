@@ -1,6 +1,7 @@
 #New Age Jekyll theme
 =========================
 
+
 ## If you are a company and you're going to use the blog: 
 1. contact bootstrap start up and ask.
 2. contact me because there is to remove some useless part.
