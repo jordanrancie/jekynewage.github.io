@@ -9639,6 +9639,41 @@ a:hover .featured-item.feature-bg-box .icon i {
 .contact-comments .cmnt-text {
   height: 150px; }
 
+.timeline-item.alt h1,
+.timeline-item.alt h2,
+.timeline-item.alt h3,
+.timeline-item.alt h4,
+.timeline-item.alt h5,
+.timeline-item.alt p {
+  text-align: right; }
+
+h4.timeline-title {
+  margin: 0;
+  color: #333333;
+  font-size: 16px;
+  margin: 0 0 5px;
+  text-transform: uppercase; }
+
+.timeline-item h5 {
+  margin: 30px 0 0 0; }
+
+.timeline-item p {
+  line-height: 20px;
+  padding-top: 20px; }
+
+.timeline-item p.summary {
+  font-weight: bold;
+  padding: 5px 0 40px 0; }
+
+.timeline-item p.summary.light {
+  font-weight: normal !important; }
+
+.project {
+  color: #337ab7 !important; }
+
+.p-bot-30 {
+  padding-bottom: 30px !important; }
+
 /* test css */
 .banner-box-hawaii {
   background-image: url("../img/header-hawaii-sunset.jpg") !important; }
